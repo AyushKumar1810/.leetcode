@@ -1,0 +1,39 @@
+from PIL import Image
+
+# Define the dimensions of the pixel art
+width = 8
+height = 8
+
+# Create a new image with the specified dimensions
+image = Image.new('RGB', (width, height))
+
+# Define the pixel colors
+colors = [
+    (240, 240, 240),  # Light gray
+    (0, 0, 0),        # Black
+    (183, 62, 51),    # Red
+    (255, 255, 255),  # White
+    # Add more colors as needed for Dhoni's design
+]
+
+# Define the pixel art pattern
+pixel_art = [
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 1, 1, 1, 1, 0, 0],
+    [0, 0, 0, 1, 1, 0, 0, 0],
+    [0, 1, 1, 1, 1, 1, 1, 0],
+    [0, 0, 1, 1, 1, 1, 0, 0],
+    [0, 0, 1, 1, 1, 1, 0, 0],
+    [0, 0, 1, 1, 1, 1, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+]
+
+# Set the pixel colors based on the pixel art pattern
+for y in range(height):
+    for x in range(width):
+        color_index = pixel_art[y][x]
+        color = colors[color_index]
+        image.putpixel((x, y), color)
+
+# Save the pixel art image
+image.save('dhoni_pixel_art.png')
