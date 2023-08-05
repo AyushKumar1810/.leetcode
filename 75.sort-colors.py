@@ -28,7 +28,7 @@ class Solution:
 
         while mid <= high:
             if nums[mid] == 0:
-                nums[low], nums[mid] = nums[mid], nums[low]
+                nums[low], nums[mid] = nums[mid], nums[low] # we will shift 0 to the 1 number ( 1st one place {just after low}) 
                 low += 1
                 mid += 1
             elif nums[mid] == 1:
