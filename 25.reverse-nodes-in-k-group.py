@@ -47,7 +47,7 @@ class Solution:
                     temp = next
                     count += 1
                 
-                l = l - k
+                l = l - k # after each iletration we will decrease the value of l as length is decreasing
                 
                 # Connect the reversed group to the remaining reversed groups recursively
                 head.next = helper(temp, l, k)
