@@ -7,13 +7,12 @@
 # @lc code=start
 class Solution:
     def removeDuplicates(self, nums):
-        l=1 #initiallt left pointer =1
-        for r in range(1 , len(nums)):# Right Pointers From 1 To nums 
-#Here we are comapring 1st index nums value with 0Th index nums value 
-            if nums[r] != nums[r-1]:
-                nums[l]=nums[r]#if it's not eaual then update into nums[l] 
-                l=l+1
-        return l
-        
-# @lc code=end
+        left =0  # basically we are taking one pointer to 0th index 
+        for right in range (1,len(nums)): # for second pointer it will go from 1st index to last
+            if nums[left] != nums[right]: # If left is not equal to right then we will increase left pointeer to 1 
+                left = left +1
+                nums[left] = nums [right] # and we will assign right value to the left and loop continue till last 
+
+        return left +1 
+    # @lc code=end
 
