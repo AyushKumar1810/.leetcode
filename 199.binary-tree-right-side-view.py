@@ -12,7 +12,7 @@
 #         self.left = left
 #         self.right = right
 
-#NOTE- So we will use of queue data structure , we wikk create two variable one  queue to store value and other res to store our right side of tree .. 
+#NOTE- So we will use of queue data structure , we will create two variable one  queue to store value and other res to store our right side of tree .. 
 # so we will traverse from the root , we will put root to the queue  , before adding another value like we will go with BFS (level over {Horizontally from left to right }) we have to pop top of the queue , so we will pop and add to our res , then we will add node value left right ..
 class Solution:
     def rightSideView(self, root: Optional[TreeNode]) -> List[int]:
