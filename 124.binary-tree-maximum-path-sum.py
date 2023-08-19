@@ -23,7 +23,7 @@ class Solution:
                 return 0
             
             # Recursively calculate the maximum sum of the right subtree
-            right = max(dfs(root.right), 0) # 1If dfs(root.right) returns a positive value (greater than 0), we assign that value to right.
+            right = max(dfs(root.right), 0) # 1 If dfs(root.right) returns a positive value (greater than 0), we assign that value to right.
 # 2 If dfs(root.right) returns 0 or a negative value, we assign 0 to right.
             
             # Recursively calculate the maximum sum of the left subtree
