@@ -24,6 +24,16 @@ class Solution:
             inorder(root.right)
         inorder(root)
         return ans[k-1]
+        # stack=[]
+        # while True :
+        #     while root:
+        #         stack.append(root)
+        #         root=root.left
+        #     root=stack.pop()
+        #     k=k-1
+        #     if k==0:
+        #         return root.val
+        #     root=root.val
 
 # here i am performing inorder traversal, hence giving me sorted array        
 # @lc code=end
