@@ -10,6 +10,12 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
-        
+        n=len(nums)
+        # Calculate the effective rotation (handles cases where k > n)
+
+        k=k%n
+        # Perform the rotation in-place using slicing and concatenation
+
+        nums[:] = nums[-k:] + nums[:-k]
 # @lc code=end
 
