@@ -5,6 +5,7 @@
 #
 
 # @lc code=start
+#NOTE:
 class Solution:
     def numberToWords(self, num: int) -> str:
         if num == 0:
