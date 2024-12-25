@@ -7,19 +7,20 @@
 # @lc code=start
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
-        
         if not prices:
             return 0
 
         max_profit = 0
-        min_price = prices[0] # we take min_price to the first index value
+        min_price = prices[0] # we take min_price to the first index value of prices list 
 
         for price in prices[1:]:
-            min_price = min(min_price, price) # we will always compare min_price with next value 
-            max_profit = max(max_profit, price - min_price)
+            min_price = min(min_price, price) # we take the minimum value of min_price and price 
+            max_profit = max(max_profit, price - min_price) # we take the maximum value of max_profit and price - min_price 
 
         return max_profit
     
+
+
 
 #NOTE:prices = [7, 1, 5, 3, 6, 4]
 # max_profit = 0
