@@ -16,7 +16,8 @@ class Solution:
 # 2nd way to solve the problem  uisng set() function 
 class Solution:
     def singleNumber(self, nums: List[int]) -> int:
-        return 2 * sum(set(nums)) - sum(nums) # 2*(a+b+c)-(a+a+b+b+c) = c #* example: 2*(1+2+3) - (1+1+2+2+3) = 3  
+        return 2 * sum(set(nums)) - sum(nums) # 2*(a+b+c)-(a+a+b+b+c) = c
+         #* example: 2*(1+2+3)-(1+1+2+2+3) = 3  
 # 3rd way to solve the problem using Counter() function from collections module 
 class Solution:
     def singleNumber(self, nums: List[int]) -> int:
@@ -36,9 +37,6 @@ class Solution:
 class Solution:
     def singleNumber(self, nums: List[int]) -> int:
         return [x for x in nums if nums.count(x) == 1][0]
-# 6th way to solve the problem using list comprehension and set() function 
-class Solution:
-    def singleNumber(self, nums: List[int]) -> int:
-        return [x for x in set(nums) if nums.count(x) == 1][0]
+
 # @lc code=end
 
