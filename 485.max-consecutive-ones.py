@@ -13,14 +13,15 @@
 # If the value at the current index is equal to zero we make the variable count as 0 since there are no more consecutive ones.
 class Solution:
     def findMaxConsecutiveOnes(self, nums: List[int]) -> int:
-        count , maximum = 0, 0 
-        for i in range (len(nums)):      
-            if nums[i]==1:
-                count+=1
-            else :
-                count = 0 
-            maximum=max(count , maximum)
-        return maximum
+        max_count = 0  # to store the maximum number of 1's  in the array
+        count = 0 # to store the number of consecutive 1's in the array 
+        for i in nums:
+            if i == 1:
+                count += 1
+                max_count = max(max_count, count)# to store the maximum number of 1's in the array 
+            else:
+                count = 0
+        return max_count
         
 # @lc code=end
 
