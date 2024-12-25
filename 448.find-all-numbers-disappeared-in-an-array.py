@@ -8,12 +8,12 @@
 class Solution:
     def findDisappearedNumbers(self, nums):
         for n in nums:
-            i=abs(n)-1
-            nums[i]=-1*abs(nums[i])
+            i=abs(n)-1 # 0 based index 
+            nums[i]=-1*abs(nums[i]) # mark the index as negative 
         res=[]
-        for i,n in enumerate(nums):
-            if n > 0:
-                res.append(i+1)
+        for i,n in enumerate(nums): # if the index is not marked as negative, then it is missing  
+            if n > 0: 
+                res.append(i+1) # add the missing number to the result list 
         return res
         
 # @lc code=end
