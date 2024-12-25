@@ -27,5 +27,8 @@ class Solution:
                 return n
 
 
+# Your NumArray object will be instantiated and called as such:
+# obj = NumArray(nums)
+# param_1 = obj.sumRange(left, right)
 
 # @lc code=end
