@@ -41,3 +41,12 @@ class Solution:
         
 # @lc code=end
 
+class Solution:
+    def sortedArrayToBST(self, nums: List[int]) -> Optional[TreeNode]:
+        if not nums:#if the list is empty return None 
+            return None 
+        mid = len(nums) // 2 #find the middle index of the list, [1,2,3,4,5] mid = 2 
+        root = TreeNode(nums[mid]) #create a new TreeNode with the value at the middle index 
+        root.left = self.sortedArrayToBST(nums[:mid]) #recursively construct the left subtree with the left half of the list 
+        root.right = self.sortedArrayToBST(nums[mid + 1:]) #recursively construct the right subtree with the right half of the list 
+        return root #return the root node of the constructed binary search tree     
