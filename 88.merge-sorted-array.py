@@ -26,24 +26,23 @@ class Solution:
 
     # Merge nums1_copy and nums2 into nums1
         while i < m and j < n:
-            if nums1_copy[i] <= nums2[j]:
-                nums1[k] = nums1_copy[i]
+            if nums1_copy[i] <= nums2[j]: # If nums1_copy[i] is smaller, append it to nums1 and increment i by 1 
+                nums1[k] = nums1_copy[i] # Append nums1_copy[i] to nums1 and increment i by 1 
                 i += 1
             else:
-                nums1[k] = nums2[j]
-                j += 1
-            k += 1
-
-    # If there are remaining elements in nums1_copy or nums2, copy them to nums1
-        while i < m:
-            nums1[k] = nums1_copy[i]
+                nums1[k] = nums2[j] # Append nums2[j] to nums1 and increment j by 1 
+                j += 1 # Increment k by 1 to move to the next position in nums1 
+            k += 1  # Increment k by 1 to move to the next position in nums1 
+        while i < m: # Append the remaining elements of nums1_copy to nums1 and increment i by 1 
+            nums1[k] = nums1_copy[i] # Append the remaining elements of nums1_copy to nums1 and increment i by 1 
             i += 1
             k += 1
 
-        while j < n:
-            nums1[k] = nums2[j]
+        while j < n: # Append the remaining elements of nums2 to nums1 and increment j by 1 
+            nums1[k] = nums2[j] # Append the remaining elements of nums2 to nums1 and increment j by 1 
             j += 1
             k += 1
+
 
 
         
