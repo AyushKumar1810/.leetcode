@@ -5,14 +5,18 @@
 #
 
 # @lc code=start
-class Solution:
-    def removeDuplicates(self, nums):
-        left =0  # basically we are taking one pointer to 0th index 
-        for right in range (1,len(nums)): # for second pointer it will go from 1st index to last
-            if nums[left] != nums[right]: # If left is not equal to right then we will increase left pointeer to 1 
-                left = left +1
-                nums[left] = nums [right] # and we will assign right value to the left and loop continue till last 
+from typing import List
 
-        return left +1 
+class Solution:
+    def removeDuplicates(self,nums: List[int]) -> int:
+        left = 0  # Initialize the left pointer to the 0th index
+        for right in range(1, len(nums)):  # The right pointer goes from the 1st index to the last
+            if nums[left] != nums[right]:  # If left is not equal to right, increment the left pointer
+                left += 1
+                nums[left] = nums[right]  # Assign the right value to the left and continue the loop
+
+        return left + 1 
+
+
     # @lc code=end
 

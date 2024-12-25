@@ -20,7 +20,8 @@ class Solution:
                 return [num_dict[target - num], i]
             num_dict[num] = i
         return None
-
+#example usage 
+# print(s.twoSum([2, 7, 11, 15], 9))
 
         
 # @lc code=end
